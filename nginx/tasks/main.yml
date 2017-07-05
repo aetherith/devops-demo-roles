@@ -1,1 +1,5 @@
 ---
+- name: Install nginx.
+  package:
+    name: '{{ nginx_package_name }}'
+    state: present
