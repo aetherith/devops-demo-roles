@@ -1,2 +1,9 @@
 ---
 nginx_package_name: nginx
+nginx_owner: www-data
+nginx_group: www-data
+nginx_http_port: 80
+nginx_conf_dir: /etc/nginx
+nginx_sites_enabled_dir: '{{ nginx_conf_dir }}/sites-enabled'
+nginx_site_conf_path: '{{ nginx_sites_enabled_dir }}/site.conf'
+nginx_site_index_path: '{{ nginx_root_dir }}/index.html'

@@ -1,0 +1,14 @@
+server {
+  listen *:{{ nginx_http_port }};
+
+  server_name {{ nginx_server_name }};
+  root {{ nginx_root_dir }};
+
+  server_tokens off;
+
+  index index.html index.htm;
+
+  location / {
+    try_files $uri $uri.html $uri/ =404;
+  }
+}
